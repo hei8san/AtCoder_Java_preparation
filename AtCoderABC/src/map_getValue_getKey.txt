@@ -1,0 +1,118 @@
+mapの値をそれぞれ取得したいとき
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			
+				curL = entry.getKey();
+				curR = entry.getValue();
+				
+TreeMapの最初と最後を取得するとき
+	Map<Integer, Integer> map = new TreeMap<>();
+	map.firstkey();
+	map.lastKey();
+				
+				
+配列内のそれぞれの要素まで？の合計の配列
+		long[] a = new long[n];
+		for(int i = 0; i < n; i++) {
+			a[i] = sc.nextLong();
+		}
+		Arrays.sort(a);
+		long[] sumA = new long[n+1];
+		for(int i = 0; i < n; i++) {
+			sumA[i+1] = sumA[i] + a[i];
+		}
+		
+Javaでラムダ式を使ってListのソートを行う。
+    class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+    
+    persons.sort((a, b) -> a.age - b.age);// 昇順 ascending order
+    persons.sort((a, b) -> b.age - a.age);// 降順　decreasing order
+
+3つの要素をソートしたい時は
+	class Score {
+		int math;
+		int eng;
+		int number;
+
+		Score(int math, int eng, int num) {
+		this.math = math;
+		this.eng = eng;
+		this.number = num;
+		}
+	}
+	
+	
+	//mathで降順、同じ場合numで昇順
+	Collections.sort(scores, (i, j) ->{
+			if(i.math > j.math) {
+				return -1; // 順番を入れ替える
+			}else if(i.math == j.math) {
+				return i.number - j.number;　//numで昇順にする
+			}else {
+				return 1; //そのまま
+			}
+			
+	});
+	
+	// 1-n までの和
+	long sumN = (1+n)*n/2;
+	
+	// 最小公倍数
+	static long lcm (long a, long b) {
+	    long temp;
+	    long c = a;
+	    c *= b;
+	    while((temp = a%b)!=0) {
+		    a = b;
+		    b = temp;
+	    }
+	    return (long)(c/b);
+    }
+    
+    //
+    class Pair{
+	 int first;
+	 int second;
+	  
+	 public Pair(int first, int second) {
+		 this.first = first;
+		 this.second = second;
+	 }
+	 @Override
+	 public String toString() {
+		 return "[" + first + ", " + second + ']';
+	 }
+}
+//
+    
+    # 配列の２要素入れ替えメソッド
+
+```Java
+public static void swap(int[] arr, int i, int j) {
+	    arr[i] = (arr[i] + arr[j]) - (arr[j] = arr[i]);
+	}
+```
+
+# エラストテネスの篩（素数の列挙）
+[解説：ABC 250](https://youtu.be/J2rt1lzpUK4?t=3397)
+```Java
+
+```
+
+# OX を決めるときは2進数がおすすめ　-> bit全探索
+1 << 3 // 1000 -> 2^3 -> 8// bit演算子
+
+#2D of ArrayList
+List<ArrayList<Integer>> tempA = new ArrayList<ArrayList<Integer>>();
+    
+    市松模様は縦をある数で割ったものと横をある数で割ったものの合計の偶奇で求める
+    
+	https://qiita.com/hei8san/private/aa6eefb6a5aab1f28bd0
+			
+			
